@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const URL = require('./models/url');
@@ -11,7 +12,7 @@ const userRoutes = require('./routes/user');
 
 
 const app = express();
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 connectMongoDB();
 
